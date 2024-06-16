@@ -10,6 +10,15 @@ pipeline {
     }
 
     stages {
+        stage('Logs') {
+            steps {
+                script {
+                    // Chamada para executar o script Python dentro do Docker
+                    pythonPipeline.logs("Python script executed successfully.")
+                }
+            }
+        }
+    }
         stage('Run Python Script') {
             steps {
                 script {
