@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     // Chamada para executar o script Python dentro do Docker
-                    pythonPipeline('python:3.9-slim', 'resources/scripts/example.py')
+                    pythonPipeline('python:3.9-slim', 'example.py')
                 }
             }
         }
