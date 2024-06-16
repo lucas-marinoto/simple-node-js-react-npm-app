@@ -4,6 +4,10 @@ library 'shared-lib'
 
 pipeline {
     agent any
+    environment {
+        gitlabSourceBranch = 'homolog'   // Simulando branch de origem como 'homolog'
+        gitlabTargetBranch = 'main'      // Simulando branch de destino como 'main'
+    }
 
     stages {
         stage('Run Python Script') {
